@@ -17,9 +17,17 @@ class DEMMatcher:
         self.action.triggered.connect(self.run)
         iface.addPluginToMenu("DEM Tools", self.action)
     
+    def initGui(self):
+        """
+        Registers the plugin in the QGIS GUI.
+        """
+        self.action = QAction("DEM Matcher", self.iface.mainWindow())
+        self.action.triggered.connect(self.run)
+        self.iface.addPluginToMenu("DEM Tools", self.action)
+
     def unload(self):
         """
-        Unloads the plugin from the QGIS menu.
+        Removes the plugin from the QGIS GUI when unloaded.
         """
         self.iface.removePluginMenu("DEM Tools", self.action)
     
