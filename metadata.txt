@@ -9,6 +9,7 @@ description=Matches two different DEMS
 version=0.1
 author=Cristina Luna
 email=cristina.luna@live.com
+required_modules=rasterio
 
 about=Matches two different DEMS into one file
 
